@@ -1,0 +1,60 @@
+topic: ~chat()
+
+concept:(hello) [hello hi hey "good morning" greetings]
+concept: (none) [neither "none of them" "neither of them" none]
+concept:(i_am) [I'm "I am"]
+concept:(adverbs) [really absolutely completely truly royally "a little" totally strictly perfectly enormously "too much" very rather]
+concept:(can_you) [
+    "[can will could may do] you {please}"
+    "do you think you could"
+    "are you ready to"
+    "do you know how to"
+    let's
+]
+concept:(addicted) [
+    "[crazy passionate fanatical avid] about"
+    "keen on"
+    "["in love" enamored] with"
+    "addicted [with to]"
+]
+concept:(what_is) [
+    "{"{~can_you} tell me" "do you know"} [
+    "[what's "what is"] {that this}"
+    "what are"
+    "what was"
+    ]"
+]
+concept:(i_like) [
+    "~i_am {~adverbs} ~addicted"
+    "I {~adverbs} [like love adore dig worship prefer]"
+    "I have an affinity for"
+    "I have a {"little bit of a"} preference for"
+    "I'm {"a bit"} weak for"
+    "I'm obsessed with"
+    "I'm {~adverbs} into"
+]
+concept:(repeat_it) [
+    "[restate repeat] {me} [the your] {last} question"
+    "~what_is the question {again}"
+    "repeat ["the sentence" "your last sentence" "what you just said"] {again} {please}"
+    "{~can_you} repeat {please}"
+    "{~can_you} ask {me} the question {again}"
+    "{~can_you} ask {me} the question one more time"
+    "tell ["it to me" me] again"
+    "what [is was] the question {again}"
+    "what ["did you say" "were you [saying "asking me"]"] {again}"
+    "ask {me} [the that] question {again}"
+    "repeat [it please]"
+    "come again"
+    "[say ask] {that} again"
+    "what was the question"
+    "{~can_you} do [it that "[the this that] [animation motion movement thing sound noise]"] again {please}"
+]
+
+proposal: %ASK Hi, I'm Pepper, I'm here to listen to your command. Can you say hello ?
+    u1:(_~hello)
+    %HELLO Hello, nice to meet you. %FINISH
+    u1:(e:Dialog/NotUnderstood)
+    I don't understand, what did you say? ^stayInScope
+    u1:(_~repeat_it)
+    Ok I said, can you say hello ? ^stayInScope
