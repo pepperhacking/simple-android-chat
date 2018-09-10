@@ -1,7 +1,5 @@
-This Challenge is for [Qi SDK - DX Training revamp](https://docs.google.com/presentation/d/1Uwc3ncRpvhwkA2TbqwovkZLLJ_FwOaKTtCrfPH9Jngw)
+Part of QISDK trainings.
 
-For the moment, this Challenge has three parts:
+Aimed at being a simple demonstration of an application using QiChat, made with Kotlin.
 
-1. Branch "master"      : Show programmer how to do chat "Hello"
-2. Branch "showImage"   : Guide programmer to do chat "Show Image"
-2. Branch "takePicture" : Let programmer do chat "Take Picture"
+For more on QiSDK, see https://android.aldebaran.com/sdk/doc/pepper-sdk/index.html
